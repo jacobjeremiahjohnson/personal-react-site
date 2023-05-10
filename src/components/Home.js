@@ -1,9 +1,10 @@
 import React from "react"
+import Title from "./Title.js"
 
 export default function Home(){
     return (
         <main>
-            Home
+            <Title />
         </main>
     )
 }

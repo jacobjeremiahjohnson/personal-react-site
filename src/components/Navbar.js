@@ -1,21 +1,8 @@
 import React from "react"
+import Mode from "./Mode.js"
 import { NavLink } from "react-router-dom"
 
 export default function Navbar(){
-
-    function clicked(e) {
-        const navbarList = e.target.parentElement.children
-        for (let i = 0; i < navbarList.length; i++){
-            navbarList[i].id = ""
-        }
-        let currentPage = e.target.innerText
-        e.target.id = "selected"
-        if (currentPage === "Home"){
-            window.location.href = "/"
-        } else {
-            window.location.href = "/" + currentPage.toLowerCase()
-        }
-    }
 
     return (
         <div>
@@ -35,6 +22,8 @@ export default function Navbar(){
                         <div>Resume</div>
                     </NavLink>
                 </div>
+
+                <Mode />
             </div>
         </div>
     )

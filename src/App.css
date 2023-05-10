@@ -1,29 +1,50 @@
 * {
   box-sizing: border-box;
-  background-color: rgb(0, 0, 0);
-  color: white;
 }
 
 body {
   margin: 0;
-  font-family: sans-serif;
-  padding: 10px;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  --main-bg-color: rgb(10, 10, 10);
+  --main: rgb(102, 255, 0);
+  --secondary: rgb(255, 255, 255);
+
+  background-color: var(--main-bg-color);
 }
 
 .navbar {
   display: flex;
   width: 100%;
   padding-left: 10px;
+  justify-content: space-between;
+}
+
+.mode {
+  font-family: 'Courier New';
+  padding-right: 10px;
+  font-size: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: var(--main)
+}
+
+.mode:hover{
+  cursor: pointer;
 }
 
 .title {
-  font-size: 40px;
-  color: white;
-  text-shadow: 5px 5px #558ABB;
+  font-family: "Arial";
+  font-size: 120px;
+  color: var(--main);
+  font-weight: lighter;
 }
 
 .navbar--list {
-  color: white;
+  color: var(--secondary);
   font-size: 12px;
   font-family:'Courier New', Courier, monospace;
   display: flex;
@@ -43,6 +64,9 @@ body {
 }
 
 .navbar--list a div{
+  color: var(--secondary);
+  background-color: var(--main-bg-color);
+
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -50,7 +74,7 @@ body {
 
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border: 1px solid rgb(0, 255, 255);
+  border: 1px solid var(--main);
 }
 
 .navbar--list a.active div{
@@ -61,17 +85,18 @@ body {
 
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border: 1px solid rgb(0, 255, 255);
+  border: 1px solid var(--main);
 
-  border-bottom: 1px solid black;
-  color: rgb(0, 255, 255);
+  border-bottom: 1px solid var(--main-bg-color);
+  color: var(--main);
+
+  transform: translateY(-2px) scale(1.05, 1.10)
 }
 
 main {
-  padding-top: 20px;
   padding-left: 20px;
 
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  border-top: 1px solid rgb(0, 255, 255);
+  border-top: 1px solid var(--main);
 }
