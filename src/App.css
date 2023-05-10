@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
 .navbar {
   display: flex;
   width: 100%;
-  border-bottom: 1px solid rgb(0, 255, 255);
+  padding-left: 10px;
 }
 
 .title {
@@ -29,15 +30,19 @@ body {
   gap: 0;
   flex-shrink: 0;
   justify-content: space-around;
-  list-style-type: none;
 
   margin-block-start: 0em;
   margin-block-end: -1px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  margin-left: 20px;
 }
 
-.navbar--list li{
+.navbar--list a{
+  text-decoration: none;
+}
+
+.navbar--list a div{
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -46,4 +51,27 @@ body {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border: 1px solid rgb(0, 255, 255);
+}
+
+.navbar--list a.active div{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid rgb(0, 255, 255);
+
+  border-bottom: 1px solid black;
+  color: rgb(0, 255, 255);
+}
+
+main {
+  padding-top: 20px;
+  padding-left: 20px;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top: 1px solid rgb(0, 255, 255);
 }
