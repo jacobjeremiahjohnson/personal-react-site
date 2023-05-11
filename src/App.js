@@ -5,6 +5,7 @@ import Home from "./components/Home.js"
 import About from "./components/About.js"
 import Projects from "./components/Projects.js"
 import Resume from "./components/Resume.js"
+import Footer from "./components/Footer.js"
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/projects' element={<Projects />} />
         <Route exact path='/resume' element={<Resume />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

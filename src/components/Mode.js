@@ -4,13 +4,13 @@ export default function Mode() {
 
     function toggleMode(e){
         var currentMode = e.target.innerText
-        var body = document.body
+        var body = document.getElementById("root")
 
         if (currentMode === "Dark") {
             e.target.innerText = "Light"
 
             body.style.setProperty("--main-bg-color", "rgb(10, 10, 10)")
-            body.style.setProperty("--main", "rgb(0, 255, 255)")
+            body.style.setProperty("--main", "rgb(255, 31, 31)")
             body.style.setProperty("--secondary", "rgb(255, 255, 255)")
 
         } else if (currentMode === "Light"){
@@ -24,7 +24,7 @@ export default function Mode() {
 
     return (
         <div className="mode" onClick={toggleMode}>
-            Light
+            Dark
         </div>
         
     )
