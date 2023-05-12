@@ -9,16 +9,16 @@ export default function Navbar(){
             <div className="navbar">
                 <div className="navbar--list">
                     <NavLink
-                    to="/personal-react-site/" >
+                    to="personal-react-site/" >
                         <div>Home</div>
                     </NavLink>
-                    <NavLink to="/personal-react-site/about">
+                    <NavLink to="personal-react-site/about">
                         <div>About</div>
                     </NavLink>
-                    <NavLink to="/personal-react-site/projects">
+                    <NavLink to="personal-react-site/projects">
                         <div>Projects</div>
                     </NavLink>
-                    <NavLink to="/personal-react-site/resume">
+                    <NavLink to="personal-react-site/resume">
                         <div>Resume</div>
                     </NavLink>
                 </div>
