@@ -6,6 +6,8 @@ html, body {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 #root {
@@ -26,6 +28,10 @@ html, body {
   --main: rgb(255, 0, 0);
   --secondary: black;
 
+  --dark-bg-color: rgb(10, 10, 10);
+  --dark-main: rgb(255, 0, 0);
+  --dark-secondary: white;
+
   background-color: var(--main-bg-color);
 }
 
@@ -43,11 +49,12 @@ html, body {
 
 .mode {
   font-family: 'Courier New';
-  padding-right: 20px;
+  margin-right: 20px;
+  padding: 3px;
   font-size: 13px;
   margin-top: auto;
   margin-bottom: auto;
-  color: var(--main)
+  color: var(--main);
 }
 
 .mode:hover{
@@ -55,21 +62,24 @@ html, body {
 }
 
 .title {
+  padding-top: 0px;
+  padding-left: 0px;
   font-family: "Roboto";
   font-weight: normal;
-  font-size: 100px;
-  color: var(--main);
+  font-size: 140px;
 
   overflow: hidden;
-  white-space: nowrap;
-  width: 15ch;
-
-  animation: typing 0.3s steps(13);
+  animation: typing 0.4s linear;
 }
 
 @keyframes typing {
-  from {
+  0% {
     width: 0;
+    white-space: nowrap;
+  } 50% {
+    width: 14ch;
+  } 100% {
+    white-space: normal;
   }
 }
 
@@ -105,6 +115,7 @@ html, body {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border: 1px solid var(--main);
+  border-bottom: none;
 }
 
 .navbar--list a.active div{
@@ -120,26 +131,45 @@ html, body {
   border-bottom: 1px solid var(--main-bg-color);
   color: var(--main);
 
-  transform: translateY(-2px) scale(1.05, 1.10)
+  transform: translateY(-1px) scale(1.05, 1.10)
 }
 
 main {
-  padding-left: 20px;
+  padding-left: 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border-top: 1px solid var(--main);
 
+  border-left: 1px solid var(--main);
+  border-right: 1px solid var(--main);
+
   width: 100%;
   height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+  background-color: var(--main-bg-color);
+  overflow: scroll;
+  overflow-x: hidden;
+  color: var(--main);
+
+}
+
+main::-webkit-scrollbar {
+  width: 1px;
+}
+
+main::-webkit-scrollbar-track {
+  margin-top: 10px;
+}
+
+/* Handle */
+main::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 5px;
 }
 
 .footer {
-  min-height: 8%;
   color: var(--main);
+  background-color: var(--main-bg-color);
   width: 100%;
   border-top: 1px solid var(--main);
   margin-bottom: 20px;
@@ -154,30 +184,248 @@ main {
   padding: 5px;
 }
 
-
-
-
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
 
 .home--content {
   color: var(--main);
-  background-color: var(--main-bg-color);
   font-family: 'Roboto';
   font-style: italic;
   text-align: right;
   padding: 10%;
   height: 100%;
   font-size: 25px;
+  position: relative;
 }
 
 .home--content--generated {
   border-right: 2px solid var(--main);
   padding-right: 3px;
-  width: auto;
   animation: blink .5s step-end infinite alternate;
+  width: fit-content;
+  margin-left: auto;
 }
 
 @keyframes blink {
   50% {
     border-color: transparent
   }
+}
+
+.about {  
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+}
+
+.about--title {
+  color: var(--main);
+  font-size: 80px;
+  text-align: center;
+  width: 100%;
+  font-style: italic;
+}
+
+.about--content {
+  color: var(--main);
+  padding: 20px;
+  text-align: left;
+  font-size: 15px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.about--image {
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--main);
+  margin-bottom: 20px;
+}
+
+.about--image img{
+  width: auto;
+  height: inherit;
+}
+
+
+
+
+
+
+.projects {
+  color: var(--main);
+}
+
+.projects--title {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  overflow: hidden;
+
+  border: 1px solid var(--main);
+}
+
+.animated--title {
+  animation: marquee 3s infinite linear;
+}
+
+.animated--title:hover {
+  animation-play-state: paused;
+
+}
+
+@keyframes marquee{
+  0% {
+    transform: translateX(100%);
+  } 100% {
+    transform: translateX(-100%);
+  }
+}
+
+.projects--body {
+  border-top: 1px solid var(--main);
+  margin-right: 20px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.project {
+  display: flex;
+  width: 80%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--main);
+
+  justify-content: stretch;
+}
+
+.project--img {
+  width: 80%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.project--img img{
+  width: 100%;
+  height: 200px;
+
+}
+
+.project--desc {
+  border-left: 1px solid var(--main);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 100%;
+}
+
+.project--git {
+  width: 100%;
+  height: 30%;
+  border-bottom: 1px solid var(--main);
+}
+
+.project--desc--body {
+  width: 100%;
+  height: 70%;
+}
+
+
+
+
+.resume {
+  display: flex;
+  justify-content: stretch;
+  padding-right: 10px;
+  flex-direction: column;
+}
+
+.resume--body {
+  border: 1px solid var(--main);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  margin-top: 2%;
+  width: 610px;
+  height: 820px;
+  padding: 70px;
+
+  background-color: var(--main);
+  transition: background-color 1s ease;
+}
+
+.resume--body:hover {
+  background-color: var(--main-bg-color);
+}
+
+.rb--title {
+  font-size: 30px;
+}
+
+.rb--links {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.rb--exp {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rb--exp--name {
+  text-align: left;
+}
+.rb--exp--time {
+  text-align: right;
+}
+.rb--loc {
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.rb--body {
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.line {
+  width: 100%;
+  border-top: 1px solid var(--main);
+  margin-top: 12px;
+}
+
+.cert {
+  margin-top: 12px;
+}
+
+.rb--loc--noit {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.resume--link {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  font-family: 'Roboto Mono';
+  font-size: 12px;
+}
+
+.resume--link a {
+  text-decoration: none;
+  color: var(--main)
 }
