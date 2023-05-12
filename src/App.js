@@ -14,10 +14,10 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/about' element={<About />} />
-        <Route exact path='/projects' element={<Projects />} />
-        <Route exact path='/resume' element={<Resume />} />
+        <Route exact path='/personal-react-site' element={<Home />} />
+        <Route exact path='/personal-react-site/about' element={<About />} />
+        <Route exact path='/personal-react-site/projects' element={<Projects />} />
+        <Route exact path='/personal-react-site/resume' element={<Resume />} />
       </Routes>
       <Footer />
     </Router>
