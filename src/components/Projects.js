@@ -1,7 +1,6 @@
 import React from "react"
-import KoreanMinesweeper from "./projects/KoreanMinesweeper"
-import PersonalSite from "./projects/PersonalSite"
-
+import KoreanMinesweeper from "./projects/KoreanMinesweeper.js"
+import PersonalSite from "./projects/PersonalSite.js"
 
 
 export default function Projects(){
@@ -15,6 +14,7 @@ export default function Projects(){
             </div>
             <div className="projects--body">
                 <KoreanMinesweeper />
+                <PersonalSite />
             </div>
         </main>
     )
