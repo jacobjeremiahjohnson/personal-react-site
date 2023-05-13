@@ -8,7 +8,7 @@ export default function Home(){
 
     var contentArray = ["...nearly a fullstack developer", "...professional gamer", "...jpmorgan chase intern", "...royal farms cashier", "...na's last hope", "...computer science student", "...lorem ipsum dolor", "........................................", "...proud delawarean", "...music fan", "...cool guy", 
     "...kinda nice at ping pong", "...freestyle rapper", "...skeuomorphism enjoyer", "...5' 11'' medium build", 
-    "...organ donor", "...proud techhead", "...former redditor", "...gold support main"]
+    "...organ donor", "...proud techhead", "...former redditor", "...gold support main", "...(type 'kaz' for a surprise)"]
 
     var conArrLen = contentArray.length
 
@@ -38,9 +38,6 @@ export default function Home(){
             if (i < text.length){
                 let currentSpeed = speed
                 e.target.innerHTML += text.charAt(i)
-                if (text.charAt(i) === "."){
-                    currentSpeed = speed * 10
-                }
                 i++
                 setTimeout(typeWriter, currentSpeed)
             } else {

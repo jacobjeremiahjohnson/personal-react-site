@@ -6,7 +6,7 @@ export default function Mode() {
         var currentMode = e.target.innerText
         var body = document.getElementById("root")
 
-        var darkbg = "#000000"
+        var darkbg = "#1A1B1C"
         var dark = "#EC5350"
         var darksecondary = "rgb(255, 255, 255)"
 

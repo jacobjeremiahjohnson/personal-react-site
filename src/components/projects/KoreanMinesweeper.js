@@ -31,7 +31,7 @@ export default function KoreanMinesweeper(){
                 </div>
 
                 <div className="project--desc--body">
-                        A simple twist on the classic Minesweeper game coded in pure Java. Instead of numbers, the game displays the Korean word for the number. As a bonus, flags appear as the Korean word for "flag" as opposed to an icon. I made this for my CSC 210 final.
+                        A simple twist on the classic Minesweeper game coded in pure Java. Instead of traditional digits, the game displays the Korean word for the number. As a bonus, flags appear as the Korean word for "flag" as opposed to an icon. I made this for my CSC 210 final.
                 </div>
             </div>
         </div>
