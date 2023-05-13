@@ -1,6 +1,6 @@
 import React from "react"
 import KoreanMinesweeper from "./projects/KoreanMinesweeper.js"
-import PersonalSite from "./projects/PersonalSite.js"
+import DelaWhere from "./projects/DelaWhere.js"
 import "../assets/styles/Projects.css"
 
 
@@ -15,7 +15,7 @@ export default function Projects(){
             </div>
             <div className="projects--body">
                 <KoreanMinesweeper />
-                <PersonalSite />
+                <DelaWhere />
             </div>
         </main>
     )
