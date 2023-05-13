@@ -1,0 +1,26 @@
+.footer {
+    color: var(--main);
+    background-color: var(--main-bg-color);
+    width: 100%;
+    border-top: 1px solid var(--main);
+    margin-bottom: 20px;
+}
+  
+.footer--content {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer--content a {
+    text-decoration: none;
+    color: var(--main);
+}
+
+.footer--content a:visited{
+    text-decoration: none;
+    color: var(--main);
+}

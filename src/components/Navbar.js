@@ -1,6 +1,7 @@
 import React from "react"
 import Mode from "./Mode.js"
 import { NavLink } from "react-router-dom"
+import "../assets/styles/Navbar.css"
 
 export default function Navbar(){
 

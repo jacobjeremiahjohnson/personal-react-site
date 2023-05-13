@@ -1,5 +1,6 @@
 import React from "react"
 import gif from "../assets/images/kirby.gif"
+import "../assets/styles/About.css"
 
 export default function About(){
 

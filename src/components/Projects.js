@@ -1,6 +1,7 @@
 import React from "react"
 import KoreanMinesweeper from "./projects/KoreanMinesweeper.js"
 import PersonalSite from "./projects/PersonalSite.js"
+import "../assets/styles/Projects.css"
 
 
 export default function Projects(){

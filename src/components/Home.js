@@ -2,6 +2,7 @@ import React from "react"
 import Title from "./Title.js"
 import files from "../assets/images/projects/wakeupkazicon-5.png"
 import {useEffect} from "react"
+import "../assets/styles/Home.css"
 
 
 export default function Home(){
@@ -69,6 +70,7 @@ export default function Home(){
     }
 
     var text = []
+    var flag = false
 
     React.useEffect(() => {
         firstContent()
@@ -81,8 +83,15 @@ export default function Home(){
             
             let max = text.length
             if(text[max-1] === "z" && text[max-2] === "a" && text[max-3] === "k"){
-                console.log("Sdflkj")
-                document.getElementsByTagName("MAIN")[0].style.backgroundImage = "url(" + files + ")" 
+                if (flag == true){
+
+                    document.getElementsByTagName("MAIN")[0].style.backgroundImage = "none"
+                    flag = false
+                } else if (flag == false){
+                    console.log("Sdflkj")
+                    document.getElementsByTagName("MAIN")[0].style.backgroundImage = "url(" + files + ")" 
+                    flag = true
+                }
             }
         });
 
